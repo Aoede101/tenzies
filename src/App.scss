@@ -1,0 +1,74 @@
+button {
+  border: none;
+  font-family: inherit;
+}
+
+main {
+  background-color: #f5f5f5;
+  font-family: "Roboto", sans-serif;
+  height: min(90%, 25rem);
+  width: min(90%, 25rem);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+
+  article {
+    text-align: center;
+    width: 70%;
+    p {
+      padding-top: 0.5rem;
+      opacity: 0.6;
+      font-size: 0.9;
+    }
+  }
+
+  .roll-btn {
+    transition: background-color 0.2s;
+    background-color: #5035ff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    padding: 0.8rem 1.9rem;
+    color: #fff;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: hsl(248, 100%, 50%);
+    }
+    &:active {
+      background-color: hsl(248, 100%, 30%);
+    }
+  }
+
+  .dice-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    row-gap: 1.4rem;
+    width: 80%;
+
+    button {
+      transition: background-color 0.05s;
+      background-color: #fff;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      box-shadow: 2px 2px 3px #33333333;
+      border-radius: 0.5rem;
+      &:active {
+        background-color: hsl(0, 0%, 90%);
+      }
+
+      &.held {
+        background-color: #59e391;
+        &:active {
+          background-color: hsl(144, 71%, 50%);
+        }
+      }
+    }
+  }
+}
