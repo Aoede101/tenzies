@@ -1,4 +1,9 @@
-export default function Die({ toggleDie, id, value, isHeld }) {
+export default function Die({
+  toggleDie,
+  id,
+  value,
+  isHeld,
+}) {
   return (
     <button
       className={isHeld ? "held" : ""}
